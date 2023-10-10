@@ -1,0 +1,24 @@
+name = "Rust"
+
+[on.push]
+branches = [ "main" ]
+
+[on.pull_request]
+branches = [ "main" ]
+
+[env]
+CARGO_TERM_COLOR = "always"
+
+[jobs.build]
+runs-on = "ubuntu-latest"
+
+  [[jobs.build.steps]]
+  uses = "actions/checkout@v3"
+
+  [[jobs.build.steps]]
+  name = "Build"
+  run = "cargo build --verbose"
+
+  [[jobs.build.steps]]
+  name = "Run tests"
+  run = "cargo test --verbose"
