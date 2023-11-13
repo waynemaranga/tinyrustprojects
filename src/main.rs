@@ -1,6 +1,7 @@
 #[allow(dead_code)]
 mod fizzbuzz;
 mod linked_list_reversal;
+mod new_tui;
 mod reactions;
 mod reactions_two;
 mod stem_and_leaf;
@@ -13,4 +14,5 @@ fn main() {
     // moment_distribution::driver_fn();
     // reactions_two::driver();
     linked_list_reversal::driver(); // implementing reversal for a simple singly-linked list
+    new_tui::driver();
 }
